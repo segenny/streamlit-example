@@ -66,44 +66,44 @@ def calculate_digit_sum(num_list):
     return new_list
 
 def iloveyou(이름1, 이름2):
-    st.text(이름1, ' -> ', 이름2)
+    st.code(이름1, ' -> ', 이름2)
     이름_1 = sum_lists(korean_to_be_englished(이름1))
     이름_2 = sum_lists(korean_to_be_englished(이름2))
 
     result = combine_lists(이름_1, 이름_2)
-    st.text(이름1[0],이름2[0],이름1[1],이름2[1],이름1[2],이름2[2])
-    st.text(result)
+    st.code(이름1[0],이름2[0],이름1[1],이름2[1],이름1[2],이름2[2])
+    st.code(result)
 
 
     # 5개의 숫자로 리스트 만들기
     first_step = calculate_digit_sum(result)
-    st.text(first_step)
+    st.code(first_step)
 
     while len(first_step) >= 3:
         first_step = calculate_digit_sum(first_step)
-        st.text(first_step)
+        st.code(first_step)
 
     # 최종 결과를 두 자리 숫자로 만들기
     final_result = str(first_step[0]) + str(first_step[1])
 
-    st.text(이름1 + ' -> ' + 이름2 + ' = ' + final_result)
+    st.code(이름1 + ' -> ' + 이름2 + ' = ' + final_result)
 
-    st.text()
-    st.text(이름2, ' -> ', 이름1)
+    st.code()
+    st.code(이름2, ' -> ', 이름1)
     result = combine_lists(이름_2, 이름_1)
-    st.text(이름2[0],이름1[0],이름2[1],이름1[1],이름2[2],이름1[2])
-    st.text(result)
+    st.code(이름2[0],이름1[0],이름2[1],이름1[1],이름2[2],이름1[2])
+    st.code(result)
     first_step = calculate_digit_sum(result)
-    st.text(first_step)
+    st.code(first_step)
 
     while len(first_step) >= 3:
         first_step = calculate_digit_sum(first_step)
-        st.text(first_step)
+        st.code(first_step)
 
     # 최종 결과를 두 자리 숫자로 만들기
     final_result = str(first_step[0]) + str(first_step[1])
 
-    st.text(이름2 + ' -> ' + 이름1 + ' = ' + final_result)
+    st.code(이름2 + ' -> ' + 이름1 + ' = ' + final_result)
 
 
 # Streamlit 앱 제목 설정
