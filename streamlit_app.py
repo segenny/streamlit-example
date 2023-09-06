@@ -95,7 +95,8 @@ def iloveyou(이름1, 이름2):
     # st.code(이름1 + ' -> ' + 이름2 + ' = ' + final_result)
     result_msg += f"{이름1} + ' -> ' + {이름2} + ' = ' + {final_result}\n"
 
-    st.code()
+    st.code(result_msg)
+    
     st.code(이름2, ' -> ', 이름1)
     result = combine_lists(이름_2, 이름_1)
     st.code(이름2[0],이름1[0],이름2[1],이름1[1],이름2[2],이름1[2])
