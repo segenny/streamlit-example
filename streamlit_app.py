@@ -61,7 +61,7 @@ def iloveyou(이름1, 이름2):
     result_msg = ""
     result_msg2 = ""
     # st.write(이름1, ' -> ', 이름2)
-    result_msg += f"{이름1}, ' -> ', {이름2}\n"
+    result_msg += f"{이름1} -> {이름2}\n"
     이름_1 = sum_lists(korean_to_be_englished(이름1))
     이름_2 = sum_lists(korean_to_be_englished(이름2))
 
@@ -92,7 +92,7 @@ def iloveyou(이름1, 이름2):
     
 
     # st.code(이름2, ' -> ', 이름1)
-    result_msg2 += f"{이름2}, ' -> ', {이름1}\n"
+    result_msg2 += f"{이름2} -> {이름1}\n"
     result = combine_lists(이름_2, 이름_1)
 
     # st.code(이름2[0],이름1[0],이름2[1],이름1[1],이름2[2],이름1[2])
@@ -118,13 +118,14 @@ def iloveyou(이름1, 이름2):
 
 
 # Streamlit 앱 제목 설정
-st.title('간단한 데이터 사랑점 분석')
+st.title('👋간단한 사랑점 알아보기')
+st.subheader("데이터분석")
 
 # 입력창 2개 추가
 number1 = st.text_input('첫번째 이름 입력')
 number2 = st.text_input('두번째 이름 입력')
 
 # 실행 버튼 클릭 여부 확인
-if st.button('사랑점 알아보기'):
+if st.button('알아보기'):
     # 입력된 숫자를 더하고 결과 출력
     iloveyou(number1, number2)
