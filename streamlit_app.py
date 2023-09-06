@@ -110,8 +110,8 @@ def iloveyou(이름1, 이름2):
 st.title('간단한 덧셈 계산기')
 
 # 입력창 2개 추가
-number1 = st.number_input('첫 번째 숫자 입력', value=0)
-number2 = st.number_input('두 번째 숫자 입력', value=0)
+number1 = st.input('첫 번째 숫자 입력', value=0)
+number2 = st.input('두 번째 숫자 입력', value=0)
 
 # 실행 버튼 클릭 여부 확인
 if st.button('계산'):
