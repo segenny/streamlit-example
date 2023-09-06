@@ -66,13 +66,13 @@ def calculate_digit_sum(num_list):
     return new_list
 
 def iloveyou(이름1, 이름2):
-    st.code(이름1, ' -> ', 이름2)
+    st.write(이름1, ' -> ', 이름2)
     이름_1 = sum_lists(korean_to_be_englished(이름1))
     이름_2 = sum_lists(korean_to_be_englished(이름2))
 
     result = combine_lists(이름_1, 이름_2)
-    st.code(이름1[0],이름2[0],이름1[1],이름2[1],이름1[2],이름2[2])
-    st.code(result)
+    st.write(이름1[0],이름2[0],이름1[1],이름2[1],이름1[2],이름2[2])
+    st.write(str(result))
 
 
     # 5개의 숫자로 리스트 만들기
