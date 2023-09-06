@@ -67,8 +67,9 @@ def calculate_digit_sum(num_list):
 
 def iloveyou(이름1, 이름2):
     result_msg = ""
+    result_msg2 = ""
     # st.write(이름1, ' -> ', 이름2)
-    result_msg += "이름1, ' -> ', 이름2\n"
+    result_msg += f"{이름1}, ' -> ', {이름2}\n"
     이름_1 = sum_lists(korean_to_be_englished(이름1))
     이름_2 = sum_lists(korean_to_be_englished(이름2))
 
@@ -97,21 +98,32 @@ def iloveyou(이름1, 이름2):
 
     st.code(result_msg)
     
-    st.code(이름2, ' -> ', 이름1)
+
+    # st.code(이름2, ' -> ', 이름1)
+    result_msg2 += f"{이름2}, ' -> ', {이름1}\n"
     result = combine_lists(이름_2, 이름_1)
-    st.code(이름2[0],이름1[0],이름2[1],이름1[1],이름2[2],이름1[2])
-    st.code(result)
+
+    # st.code(이름2[0],이름1[0],이름2[1],이름1[1],이름2[2],이름1[2])
+    result_msg2 += f"{이름2[0]},{이름1[0]},{이름2[1]},{이름1[1]},{이름2[2]},{이름1[2]}\n"
+    result_msg2 += str(result)+"\n"
+    # st.code(result)
+
+
     first_step = calculate_digit_sum(result)
-    st.code(first_step)
+    # st.code(first_step)
+    result_msg2 += str(first_step)+"\n"
 
     while len(first_step) >= 3:
         first_step = calculate_digit_sum(first_step)
-        st.code(first_step)
+        # st.code(first_step)
+        result_msg2 += str(first_step)+"\n"
 
     # 최종 결과를 두 자리 숫자로 만들기
     final_result = str(first_step[0]) + str(first_step[1])
 
     st.code(이름2 + ' -> ' + 이름1 + ' = ' + final_result)
+    result_msg2 += f"{이름2} + ' -> ' + {이름1} + ' = ' + {final_result}\n"
+    st.code(result_msg2)
 
 
 # Streamlit 앱 제목 설정
