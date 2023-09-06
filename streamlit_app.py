@@ -5,14 +5,6 @@ import pandas as pd
 import streamlit as st
 
 """
-# Welcome to Streamlit!
-
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
-
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
-
-In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
 # 초성 리스트. 00 ~ 18
@@ -94,7 +86,7 @@ def iloveyou(이름1, 이름2):
     final_result = str(first_step[0]) + str(first_step[1])
 
     # st.code(이름1 + ' -> ' + 이름2 + ' = ' + final_result)
-    result_msg += f"{이름1} + ' -> ' + {이름2} + ' = ' + {final_result}\n"
+    result_msg += f"{이름1} -> {이름2} = {final_result}\n"
 
     st.code(result_msg)
     
@@ -121,19 +113,18 @@ def iloveyou(이름1, 이름2):
     # 최종 결과를 두 자리 숫자로 만들기
     final_result = str(first_step[0]) + str(first_step[1])
 
-    st.code(이름2 + ' -> ' + 이름1 + ' = ' + final_result)
-    result_msg2 += f"{이름2} + ' -> ' + {이름1} + ' = ' + {final_result}\n"
+    result_msg2 += f"{이름2} -> {이름1} = {final_result}\n"
     st.code(result_msg2)
 
 
 # Streamlit 앱 제목 설정
-st.title('간단한 덧셈 계산기')
+st.title('간단한 데이터 사랑점 분석')
 
 # 입력창 2개 추가
-number1 = st.text_input('첫 번째 숫자 입력')
-number2 = st.text_input('두 번째 숫자 입력')
+number1 = st.text_input('첫번째 이름 입력')
+number2 = st.text_input('두번째 이름 입력')
 
 # 실행 버튼 클릭 여부 확인
-if st.button('계산'):
+if st.button('사랑점 알아보기'):
     # 입력된 숫자를 더하고 결과 출력
     iloveyou(number1, number2)
